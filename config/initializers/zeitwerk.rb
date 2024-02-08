@@ -6,5 +6,8 @@ module FYBER
 end
 
 loader = Zeitwerk::Loader.new
-loader.push_dir("#{__dir__}/lib/fyber", namespace: FYBER)
+loader.inflector.inflect 'types.rb' => 'Types'
+loader.push_dir(File.join(Dir.pwd, 'lib', 'entities'))
+loader.push_dir(File.join(Dir.pwd, 'lib', 'fyber'), namespace: FYBER)
+loader.push_dir(File.join(Dir.pwd, 'lib', 'utilities'))
 loader.setup
