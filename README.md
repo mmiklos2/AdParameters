@@ -82,3 +82,17 @@ the following rule in order to associate creatives to placement:
   
 BONUS: Create a web server that when requested a placement with a floor price returns the
 creative a creative that pays at least that floor price
+
+
+# Solution
+
+#### JIRA tix:
+- create protobuf definitions DONE
+- add Money gem
+- create exchange rate converter- create entities for creatives and placements
+- create XML reader
+- create factory to create protobuf objects
+- create rule to associate creatives to placement
+- create web server
+- create dockerfile
+- add zeitwerk for autoloading
