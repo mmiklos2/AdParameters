@@ -88,8 +88,9 @@ creative a creative that pays at least that floor price
 
 #### JIRA tix:
 - create protobuf definitions DONE
-- add Money gem
-- create exchange rate converter- create entities for creatives and placements
+- add Money gem DONE
+- create exchange rate converter DONE
+- create entities for creatives and placements
 - create XML reader
 - create factory to create protobuf objects
 - create rule to associate creatives to placement

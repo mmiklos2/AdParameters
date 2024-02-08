@@ -5,6 +5,7 @@ source 'https://rubygems.org'
 gem 'google-protobuf'
 gem 'money'
 gem 'nokogiri'
+gem 'zeitwerk'
 
 group 'development' do
   gem 'pry'
