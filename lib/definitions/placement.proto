@@ -1,0 +1,10 @@
+syntax = "proto2";
+
+package FYBER.userconfiguration;
+
+import "creative.proto";
+
+message Placement {
+  required string id = 1;
+  repeated Creative creative = 2;
+}
