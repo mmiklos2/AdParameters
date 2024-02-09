@@ -3,14 +3,14 @@
 require 'dry-struct'
 require 'money'
 
-class Creative < Dry::Struct
+class Placement < Dry::Struct
   include Types
 
   attribute :id, Types::Coercible::String
-  attribute :price, Types::Coercible::Decimal
+  attribute :floor, Types::Coercible::Decimal
   attribute :currency, Types::Coercible::String
 
-  def price_in_money
-    ::Money.from_amount(price, currency)
+  def floor_in_money
+    ::Money.from_amount(floor, currency)
   end
 end
