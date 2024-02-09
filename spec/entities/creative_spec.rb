@@ -6,7 +6,17 @@ require 'spec_helper'
 RSpec.describe Creative do
   subject { described_class.new(id: 'video-1', price: BigDecimal('6.4567'), currency: 'EUR') }
 
-  it do
-    expect(subject.price_in_money).to be_a(Money)
+  describe '#price_in_euros' do
+    it 'returns the price in euros' do
+      expect(subject.price_in_euros).to eq(Money.new(646, 'EUR'))
+    end
+
+    context 'when the currency is USD' do
+      subject { described_class.new(id: 'video-1', price: BigDecimal('6.4567'), currency: 'USD') }
+
+      it 'returns the price in euros' do
+        expect(subject.price_in_euros).to eq(Money.new(572, 'EUR'))
+      end
+    end
   end
 end

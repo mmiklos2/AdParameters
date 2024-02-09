@@ -21,6 +21,7 @@ Money::Currency.register(
   }
 )
 
-Money.add_rate('EUR', 'TYR', 3.31)
-Money.add_rate('EUR', 'USD', 1.13)
-Money.add_rate('EUR', 'SEK', 11.29)
+# inverse rates from PDF and online (for SEK)
+Money.add_rate('TYR', 'EUR', 1 / 3.31)
+Money.add_rate('USD', 'EUR', 1 / 1.13)
+Money.add_rate('SEK', 'EUR', 1 / 11.29)

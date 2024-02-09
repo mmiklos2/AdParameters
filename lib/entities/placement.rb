@@ -10,7 +10,7 @@ class Placement < Dry::Struct
   attribute :floor, Types::Coercible::Decimal
   attribute :currency, Types::Coercible::String
 
-  def floor_in_money
-    ::Money.from_amount(floor, currency)
+  def floor_in_euros
+    Money.from_amount(floor, currency).exchange_to('EUR')
   end
 end

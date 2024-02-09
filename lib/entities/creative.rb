@@ -10,7 +10,7 @@ class Creative < Dry::Struct
   attribute :price, Types::Coercible::Decimal
   attribute :currency, Types::Coercible::String
 
-  def price_in_money
-    ::Money.from_amount(price, currency)
+  def price_in_euros
+    Money.from_amount(price, currency).exchange_to('EUR')
   end
 end
