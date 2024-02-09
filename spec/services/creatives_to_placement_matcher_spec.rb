@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require_relative '../../lib/services/creatives_to_placement_matcher'
+require_relative '../../lib/entities/creative'
+require_relative '../../lib/entities/placement'
 
 RSpec.describe CreativesToPlacementMatcher do
   subject do
@@ -16,7 +19,7 @@ RSpec.describe CreativesToPlacementMatcher do
   describe '#call' do
     it 'returns the file content' do
       expect(subject).to eq(
-        placement: [creative_2, creative_3]
+        [placement, [creative_2, creative_3]]
       )
     end
   end

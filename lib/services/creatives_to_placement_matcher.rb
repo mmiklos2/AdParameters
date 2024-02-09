@@ -8,7 +8,7 @@ class CreativesToPlacementMatcher
   end
 
   def call
-    { placement: creatives.select { |creative| creative.price_in_euros >= placement.floor_in_euros } }
+    [placement, creatives.select { |creative| creative.price_in_euros >= placement.floor_in_euros }]
   end
 
   attr_reader :creatives, :placement

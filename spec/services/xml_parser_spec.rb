@@ -2,6 +2,7 @@
 
 require 'nokogiri'
 require 'spec_helper'
+require_relative '../../lib/services/xml_parser'
 
 RSpec.describe XmlParser do
   subject do

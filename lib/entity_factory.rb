@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+require_relative 'entities/creative'
+require_relative 'entities/placement'
+
 class EntityFactory
   # This class is responsible for creating entities from XML nodes. It could be meta-programmed to be shorter, but
   # I find explicit methods to be much faster on runtime and easier to understand.

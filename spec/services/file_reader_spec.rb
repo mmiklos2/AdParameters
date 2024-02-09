@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require_relative '../../lib/services/file_reader'
 
 RSpec.describe FileReader do
   subject do

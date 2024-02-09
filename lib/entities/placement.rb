@@ -2,6 +2,7 @@
 
 require 'dry-struct'
 require 'money'
+require_relative '../utilities/types'
 
 class Placement < Dry::Struct
   include Types

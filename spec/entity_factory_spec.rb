@@ -3,6 +3,9 @@
 require 'bigdecimal'
 require 'nokogiri'
 require 'spec_helper'
+require_relative '../lib/entity_factory'
+require_relative '../lib/entities/creative'
+require_relative '../lib/entities/placement'
 
 RSpec.describe EntityFactory do
   let(:parsed_xml) { Nokogiri::XML(File.open('spec/fixtures/dashboard_configuration.xml')) }

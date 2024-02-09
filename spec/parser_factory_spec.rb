@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require_relative '../lib/parser_factory'
+require_relative '../lib/services/xml_parser'
 
 RSpec.describe ParserFactory do
   subject { described_class.create_parser(format) }

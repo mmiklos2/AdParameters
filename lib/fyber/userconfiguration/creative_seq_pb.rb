@@ -4,7 +4,7 @@
 
 require 'google/protobuf'
 
-require 'creative_pb'
+require_relative 'creative_pb'
 
 
 descriptor_data = "\n\x12\x63reative_seq.proto\x12\x17\x46YBER.userconfiguration\x1a\x0e\x63reative.proto\"B\n\x0b\x43reativeSeq\x12\x33\n\x08\x63reative\x18\x01 \x03(\x0b\x32!.FYBER.userconfiguration.Creative"

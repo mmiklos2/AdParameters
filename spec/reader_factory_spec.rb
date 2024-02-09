@@ -1,6 +1,9 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
+require_relative '../lib/reader_factory'
+require_relative '../lib/services/file_reader'
+
 
 RSpec.describe ReaderFactory do
   subject { described_class.create_reader(format) }

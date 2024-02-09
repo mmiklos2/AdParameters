@@ -4,7 +4,7 @@
 
 require 'google/protobuf'
 
-require 'placement_pb'
+require_relative 'placement_pb'
 
 
 descriptor_data = "\n\x13placement_seq.proto\x12\x17\x46YBER.userconfiguration\x1a\x0fplacement.proto\"E\n\x0cPlacementSeq\x12\x35\n\tplacement\x18\x01 \x03(\x0b\x32\".FYBER.userconfiguration.Placement"

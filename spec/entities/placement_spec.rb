@@ -2,6 +2,7 @@
 
 require 'bigdecimal'
 require 'spec_helper'
+require_relative '../../lib/entities/placement'
 
 RSpec.describe Placement do
   subject { described_class.new(id: 'video-1', floor: BigDecimal('6.4567'), currency: 'EUR') }

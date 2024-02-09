@@ -7,7 +7,6 @@ gem 'dry-types'
 gem 'google-protobuf'
 gem 'money'
 gem 'nokogiri'
-gem 'zeitwerk'
 
 group 'development' do
   gem 'rspec'
