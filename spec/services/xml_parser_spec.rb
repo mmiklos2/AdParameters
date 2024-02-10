@@ -9,11 +9,19 @@ RSpec.describe XmlParser do
     described_class.new.parse(data: xml_data)
   end
 
-  let(:xml_data) { File.open('spec/fixtures/dashboard_configuration.xml') }
-
   describe '#parse' do
+    let(:xml_data) { File.open('spec/fixtures/dashboard_configuration.xml') }
+
     it 'returns a Nokogiri::XML::Document' do
       expect(subject).to be_an_instance_of(Nokogiri::XML::Document)
+    end
+
+    context 'when the XML is empty' do
+      let(:xml_data) { File.open('spec/fixtures/empty_dashboard_configuration.xml') }
+
+      it 'raises an error' do
+        expect { subject }.to raise_error(Nokogiri::XML::SyntaxError)
+      end
     end
   end
 end

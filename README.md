@@ -86,3 +86,16 @@ creative a creative that pays at least that floor price
 
 # Solution
 
+The solution is a simple ruby application that reads an input file from an argument and outputs a Protobuf PlacementSeq object.
+I used dry-rb to validate the input before attempting to create the Protobuf objects.
+
+### Requirements
+- Ruby 3.2.2
+
+### How to run the application
+1. Clone the repository
+2. Run `bundle install`
+3. Run `ruby lib/ad_parameters.rb example.xml`
+
+### How to run the tests
+- Run `bundle exec rspec`
