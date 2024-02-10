@@ -70,7 +70,8 @@ RSpec.describe 'main' do
             FYBER::Userconfiguration::Creative.new(id: 'Video-25', price: 8.37)
           ]
         )
-      ])
+      ]
+    )
   end
 
   it 'outputs the PlacementSeq protobuf to stdout' do

@@ -7,3 +7,7 @@ AllCops:
   Exclude:
     - 'lib/fyber/**/*'  # Exclude the 'fyber' directory and all its contents
     - 'spec/spec_helper.rb'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'spec/**/*'
