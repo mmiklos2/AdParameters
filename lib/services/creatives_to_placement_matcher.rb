@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 class CreativesToPlacementMatcher
-
   def initialize(creatives:, placement:)
     @creatives = creatives
     @placement = placement
