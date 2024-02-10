@@ -6,7 +6,9 @@ require_relative 'parser'
 class XmlParser < Parser
   def parse(data:)
     doc = Nokogiri::XML(data)
-    doc.root.elements.any? ? doc : (raise Nokogiri::XML::SyntaxError, 'Empty XML')
+    raise Nokogiri::XML::SyntaxError, 'Empty XML' if doc.root.elements.none?
+
+    # raise Nokogiri::XML::SyntaxError, 'Invalid XML' unless doc.errors.empty?
 
     doc
   end

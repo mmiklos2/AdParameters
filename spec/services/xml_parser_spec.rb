@@ -23,5 +23,14 @@ RSpec.describe XmlParser do
         expect { subject }.to raise_error(Nokogiri::XML::SyntaxError)
       end
     end
+
+    # Nokogiri does not support any XML above 1.0
+    # context 'when the XML is not valid' do
+    #   let(:xml_data) { File.open('spec/fixtures/malformed.xml') }
+    #
+    #   it 'raises an error' do
+    #     expect { subject }.to raise_error(Nokogiri::XML::SyntaxError)
+    #   end
+    # end
   end
 end
