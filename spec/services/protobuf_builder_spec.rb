@@ -1,11 +1,14 @@
 # frozen_string_literal: true
 
-require_relative '../ad_parameters'
-require_relative '../lib/fyber/userconfiguration/creative_pb'
-require_relative '../lib/fyber/userconfiguration/placement_pb'
-require_relative '../lib/fyber/userconfiguration/placement_seq_pb'
+require_relative '../../lib/services/protobuf_builder'
+require_relative '../../lib/fyber/userconfiguration/creative_pb'
+require_relative '../../lib/fyber/userconfiguration/placement_pb'
+require_relative '../../lib/fyber/userconfiguration/placement_seq_pb'
 
-RSpec.describe 'main' do
+RSpec.describe ProtobufBuilder do
+  subject { described_class.new(data_source:).call }
+
+  let(:data_source) { File.join(Dir.pwd, 'example.xml') }
   let(:expected_output) do
     FYBER::Userconfiguration::PlacementSeq.new(
       placement: [
@@ -75,6 +78,6 @@ RSpec.describe 'main' do
   end
 
   it 'outputs the PlacementSeq protobuf to stdout' do
-    expect { main }.to output("#{expected_output}\n").to_stdout
+    expect(subject).to eq(expected_output)
   end
 end
