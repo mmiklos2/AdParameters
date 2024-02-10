@@ -4,9 +4,7 @@ require 'spec_helper'
 require_relative '../../lib/services/file_reader'
 
 RSpec.describe FileReader do
-  subject do
-    described_class.new.read(data_source: file_path)
-  end
+  subject { described_class.new.read(data_source: file_path) }
 
   let(:file_path) { 'spec/fixtures/dashboard_configuration.xml' }
 
