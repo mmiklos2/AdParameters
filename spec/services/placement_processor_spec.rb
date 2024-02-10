@@ -25,5 +25,21 @@ RSpec.describe PlacementProcessor do
 
       subject
     end
+
+    context 'when the file does not exist' do
+      let(:data_source) { 'non_existent_file.xml' }
+
+      it 'raises an ArgumentError' do
+        expect { subject }.to raise_error(ArgumentError, 'File not found: non_existent_file.xml')
+      end
+    end
+
+    context 'when the file is not an XML' do
+      let(:data_source) { 'spec/fixtures/dashboard_configuration.txt' }
+
+      it 'raises an ArgumentError' do
+        expect { subject }.to raise_error(ArgumentError, 'File not an XML: spec/fixtures/dashboard_configuration.txt')
+      end
+    end
   end
 end
